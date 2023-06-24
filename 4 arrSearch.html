@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search">
+    <button onclick="myfun()">search</button>
+    <h1>[20, 30, 50, 80, 20, 10]</h1>
+    <h1 id="show"></h1>
+
+    <script>
+      function myfun() {
+        let arr = [20, 30, 50, 80, 20, 10];
+        let val = document.getElementById("search").value;
+        val = parseInt(val)
+        let index = [];
+
+        for (let i = 0; i < arr.length; i++) {
+             if (val === arr[i] ) {
+               index.push(i)
+               
+             }
+        }
+        document.getElementById("show").innerHTML = index ;
+      }
+      
+    </script>
+</body>
+</html>

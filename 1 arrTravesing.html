@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="val" />
+    <button onclick="mybtn()">click</button>
+
+    <script>
+      //kaya index upar kayo arr chhe te janva mate
+      let arr = [12, 23, 1, 4, 5, 7, 33, 55, 77, 89, 90, 0];
+
+      function mybtn() {
+      let data = document.getElementById("val").value;
+      data = parseInt(data)
+      if (data <= arr.length) {
+        return alert(arr[data])
+      } else {
+        alert("sorry")
+      }
+      }
+    </script>
+  </body>
+</html>

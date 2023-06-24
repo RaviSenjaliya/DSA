@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="show"></h1>
+    <script>
+      //assendin and desanding order ma array ne karava mate
+      let arr = [20, 30, 50, 80, 20, 10];
+      let data = arr.sort((a, b) => b - a);
+      document.getElementById("show").innerHTML = data;
+
+      //array min and max find karva mate
+
+      //   let val = Math.max(...arr2)
+      //   document.write(val)
+
+      function min() {
+        let arr2 = [20, 30, 50, 80, 20, 10, 3, 6, 1];
+
+        let min = Number.POSITIVE_INFINITY;
+        // let max = Number.NEGATIVE_INFINITY
+
+        for (const i of arr2) {
+          if (i < min) {
+            //(i > max)
+            min = i;
+          }
+        }
+        return min;
+      }
+      let show = min();
+      document.write(show);
+    </script>
+  </body>
+</html>

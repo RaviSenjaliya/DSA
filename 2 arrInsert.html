@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="position" />
+    <input type="text" id="newEl" placeholder="newElement" />
+    <button onclick="myfun()">insert</button>
+    <h1>[20, 30, 50, 80, 20, 10]</h1>
+    <h1 id="show"></h1>
+
+    <script>
+      // arr mathi koy item add karva mate / splice(start , delet , add) no pan use kari shakay
+      //<==== <==== <==== shift thase arry
+      function myfun() {
+        let arr = [20, 30, 50, 80, 20, 10];
+        let position = document.getElementById("position").value;
+        let newEl = document.getElementById("newEl").value;
+        newEl = parseInt(newEl);
+        for (let i = arr.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            arr[i+1]= arr[i]
+            if (i == position) {
+              arr[i]= newEl
+            }
+          }
+        }
+     document.getElementById("show").innerHTML = arr
+      }
+
+     
+    </script>
+  </body>
+</html>

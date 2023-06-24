@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="show"></h1>
+    <script>
+      data1 = [1, 2, 3, 4, 5, 6, 8, 3];
+      data2 = [5, 4, 7, 8, 9, 10];
+      data3 = [];
+      for (let i = 0; i < data1.length; i++) {
+        data3[i] = data1[i];
+      }
+      for (let i = 0; i < data2.length; i++) {
+        data3[data1.length + i] = data2[i];
+      }
+      //use of concat method
+      let all = data1.concat(data2);
+      document.getElementById("show").innerHTML = all + " //// " + data3;
+    </script>
+  </body>
+</html>
